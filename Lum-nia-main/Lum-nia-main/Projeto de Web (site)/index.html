@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Online - Início</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Conceito do Frontend */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #2d2f48;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Barra de Navegação */
+        .navbar {
+            background-color: #2f6c81;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-grow: 1;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .navbar ul li a:hover {
+            background-color: #417b97;
+            border-radius: 5px;
+        }
+        /* Logo da Livraria */
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        /* Hero Section */
+        .hero {
+            background-color: #42b3a9;
+            padding: 100px 20px 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+            background-image: url('path_to_hero_image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            background-color: #079e6f;
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #09bbb4;
+        }
+        /* Seção de Destaques */
+        .featured {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .featured h2 {
+            margin-bottom: 30px;
+        }
+        .featured .book-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .book-list .book {
+            background-color: #2f6c81;
+            color: #ffffff;
+            padding: 20px;
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .book-list .book:hover {
+            transform: translateY(-5px);
+        }
+        .book-list .book a {
+            color: #98e0c5;
+            text-decoration: none;
+        }
+        /* Busca Personalizada */
+        .search-bar {
+            padding: 30px 20px;
+            background-color: #42b3a9;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border-radius: 5px;
+            border: 2px solid #079e6f;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #079e6f;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: #09bbb4;
+        }
+        /* Formulário */
+        .form-section {
+            padding: 50px 20px;
+            background-color: #2d2f48;
+            color: #ffffff;
+            text-align: center;
+        }
+        .form-section h2 {
+            margin-bottom: 20px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-section input, .form-section textarea {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 2px solid #079e6f;
+        }
+        .form-section button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #079e6f;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-section button:hover {
+            background-color: #09bbb4;
+        }
+        /* Rodapé */
+        .footer {
+            background-color: #2f6c81;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Layout Responsivo */
+        @media (max-width: 768px) {
+            .featured .book-list {
+                flex-direction: column;
+            }
+            .navbar ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <div class="navbar">
+        <img src="./dragão da livraria online.png" alt="Logo da Livraria" class="logo">
+        <ul>
+            <li><a href="livro.html">Livros</a></li>
+            <li><a href="autores.html">Autores</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Descubra o Seu Próximo Livro Favorito</h1>
+        <p>Explore uma seleção incrível de livros recomendados especialmente para você!</p>
+        <button onclick="window.location.href='#explorar'">Descubra o Próximo Livro</button>
+    </div>
+
+    <!-- Seção de Destaques -->
+    <div class="featured" id="explorar">
+        <h2>Livros em Destaque</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>Nos Limites do Mar Sombrio da Escuridão</h3>
+                <p>Novo Lançamento</p>
+                <a href="livro.html">Saiba mais</a>
+            </div>
+            <div class="book">
+                <h3>Amêndoas</h3>
+                <p>Recomendado</p>
+                <a href="livro.html">Saiba mais</a>
+            </div>
+            <div class="book">
+                <h3>O Horizonte Mora em Um Dia Cinza</h3>
+                <p>Popular</p>
+                <a href="livro.html">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulário de Contato -->
+    <div class="form-section">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="message" placeholder="Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2024 Livraria Online. Todos os direitos reservados.</p>
+    </div>
+</body>
+</html>
